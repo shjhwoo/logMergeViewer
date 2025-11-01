@@ -23,15 +23,15 @@ func main() {
 		processId = pId
 	}
 
-	var cnt int
+	// var cnt int
 
 	for {
-		fmt.Printf("Hello, World! from %s\n", processName)
-		time.Sleep(time.Duration(processId) * time.Second)
-		cnt++
-		if cnt >= 5 {
-			break
-		}
+		fmt.Printf("Hello, World! from %s %v\n", processName, time.Now().Add(time.Hour))
+		time.Sleep(time.Duration(processId*5) * time.Second)
+		// cnt++
+		// if cnt >= 5 {
+		// 	break
+		// }
 	}
 }
 
